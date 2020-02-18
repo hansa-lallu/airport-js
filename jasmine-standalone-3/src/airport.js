@@ -1,5 +1,7 @@
-var Airport = function() {};
-
-Airport.prototype.print = function() {
-return 4;
+function Airport(){
+  this._hangar = [];
+}
+Airport.prototype.planes = function(){ return this._hangar; };
+Airport.prototype.clearForLanding = function(plane) {
+  this._hangar.push(plane);
 };
